@@ -22,6 +22,8 @@ function renderHTML(players: Awaited<ReturnType<typeof getPlayers>>) {
       <td>${p.position}</td>
       <td>${p.batting_avg ?? "—"}</td>
       <td>${p.home_runs ?? "—"}</td>
+      <td>${p.age ?? "—"}</td>
+      <td>${p.salary != null ? "$" + p.salary.toLocaleString() : "—"}</td>
     </tr>`
     )
     .join("");
@@ -50,6 +52,8 @@ function renderHTML(players: Awaited<ReturnType<typeof getPlayers>>) {
         <th>Position</th>
         <th>Batting Avg</th>
         <th>Home Runs</th>
+        <th>Age</th>
+        <th>Salary</th>
       </tr>
     </thead>
     <tbody>${rows}</tbody>
