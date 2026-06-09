@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model rockies_players {
+  id            Int      @id @default(autoincrement())
+  name          String
+  position      String
+  jersey_number Int
+  batting_avg   Decimal? @db.Decimal(4, 3)
+  home_runs     Int?
+}
