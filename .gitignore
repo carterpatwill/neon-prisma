@@ -1,3 +1,22 @@
+# dependencies
+/node_modules
+
+# secrets & local config
+.env
+.env.local
 .neon
 
-/generated/prisma
+# Prisma generated client
+/generated
+
+# build output
+dist
+*.tsbuildinfo
+
+# OS / editor cruft
+.DS_Store
+
+# Claude Code / agent tooling
+.claude/
+.agents/
+skills-lock.json

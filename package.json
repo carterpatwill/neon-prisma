@@ -1,19 +1,30 @@
 {
-  "name": "rockies",
+  "name": "neon-prisma-rockies",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A demo of Neon Postgres database branching and Prisma migrations, using a Colorado Rockies roster as sample data.",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "seed": "tsx --env-file=.env seed.ts",
+    "seed:salary-age": "tsx --env-file=.env seed-salary-age.ts",
+    "view": "tsx --env-file=.env view.ts",
+    "prisma:generate": "prisma generate",
+    "prisma:pull": "prisma db pull",
+    "prisma:migrate": "prisma migrate deploy"
   },
+  "keywords": [
+    "neon",
+    "postgres",
+    "prisma",
+    "database-branching",
+    "migrations",
+    "demo"
+  ],
+  "author": "carterpatwill",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/carterpatwill/neon-prisma.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/carterpatwill/neon-prisma/issues"
   },
